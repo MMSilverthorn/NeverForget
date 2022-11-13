@@ -38,13 +38,16 @@ namespace Appointments
                         appoint.DeleteEntries();
                         break;
                     case '4':
-                        Console.WriteLine("Press any key to leave the program.");
+                        Console.WriteLine(" To leave the program.");
                         break;
                     default:
                         Console.WriteLine("Error. Have you had your coffee yet? Press any key to choose another action.");
                         break;
                 }
+              
+                Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
+               
             }
         }
     }
