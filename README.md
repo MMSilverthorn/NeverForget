@@ -14,4 +14,5 @@ TryParse, If/Else,Foreach
 
 Flaws:
 No retention of information when shut down (is run by the NeverForget.csproj)
+Former flaw: Thank you Carl B for helping me with code placement.
 You must hit a key after the program gives you a result to make a choice from the main loop
