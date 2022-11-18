@@ -32,7 +32,7 @@ namespace Appointments
                 choice = Console.ReadKey().KeyChar;
                 Console.WriteLine(); 
                     {
-                        string path = @"MyJournal.txt";
+                        string path = @"C:\Temp\MyJournal.txt";
                         if (!File.Exists(path))
                         {
                             // Create a file to write to.
@@ -55,11 +55,17 @@ namespace Appointments
                         appoint.DeleteEntries();
                         break;
                     case '4':    
-                        
-                        
+                        string path = @"C:\Temp\MyJournal.txt";
+                        StreamWriter sw = File.AppendText(path);
+                        sw.WriteLine();
+                        Console.WriteLine("Please enter a comment: ");
+                        string commentLine = Console.ReadLine();
+                         sw.WriteLine(commentLine);
+                        sw.Close();
+
                         break;
                     case '5':
-                        using (StreamReader sr = new StreamReader(@"MyJournal.txt"))
+                        using (StreamReader sr = new StreamReader(@"C:\Temp\MyJournal.txt"))
                         {  
                             string s;
                             do
